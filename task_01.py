@@ -1,9 +1,15 @@
 def is_palindrome(string):
-    string.lower()
-    if string == string[::-1] and string != None:
-        return True
-    else:
+    if isinstance(string, int):
+        string = str(string)
+    if string is None or not isinstance(string, str):
         return False
+    
+    normalized = ''
+    for char in string.lower():
+        if char.isalnum():
+            normalized+= char
+    return normalized == normalized[::-1]
+
 
 print(
 is_palindrome("A man, a plan, a canal -- Panama") # => True
