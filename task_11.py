@@ -26,9 +26,9 @@ class Dessert:
         return True
 
 
-dessert1 = Dessert("Chocolate Cake", 300)
+# dessert1 = Dessert("Chocolate Cake", 300)
 
-print(dessert1.name)
-print(dessert1.calories)
-print(dessert1.is_delicious())
-print(dessert1.is_healthy())
+# print(dessert1.name)
+# print(dessert1.calories)
+# print(dessert1.is_delicious())
+# print(dessert1.is_healthy())
