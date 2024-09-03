@@ -24,5 +24,11 @@ def rps_game_winner(players):
 
 rps_game_winner([['player1', 'P'], ['player2', 'S'], ['player3', 'S']]) # => WrongNumberOfPlayersError
 rps_game_winner([['player1', 'P'], ['player2', 'A']]) # => NoSuchStrategyError
+print(
 rps_game_winner([['player1', 'P'], ['player2', 'S']]) # => 'player2 S'
+
+)
+print(
 rps_game_winner([['player1', 'P'], ['player2', 'P']]) # => 'player1 P'
+
+)
