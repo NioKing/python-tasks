@@ -6,8 +6,8 @@ def combine_anagrams(words_array):
             anagrams[sorted_word].append(word.lower())
         else:
             anagrams[sorted_word] = [word.lower()]
-    print(anagrams.values())
-    return anagrams.values()
+    print(list(anagrams.values()))
+    return list(anagrams.values())
 
 
 combine_anagrams(["cars", "for", "potatoes", "racs", "four", "scar",
