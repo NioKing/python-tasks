@@ -11,8 +11,8 @@ def max_odd(array):
                     res = a
 
     flattenArray(array)
-    print(res)
-    return res
+    print(int(res) if res else None)
+    return int(res) if res else None
 
 max_odd([1, 2, 3, 4, 4]) # => 3
 max_odd([21.0, 2, 3, 4, 4]) # => 21
