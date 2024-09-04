@@ -17,9 +17,9 @@ class Dessert:
 
     @calories.setter
     def calories(self, value):
-        if isinstance(value, (int, float)):
-            self._calories = value
-        else:
+        try:
+            self._calories = int(value)
+        except ValueError:
             raise ValueError("Calories must be a number!")
 
     def is_healthy(self):
