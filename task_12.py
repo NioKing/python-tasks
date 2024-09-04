@@ -9,7 +9,7 @@ class JellyBean(Dessert):
     def flavor(self):
         return self._flavor
 
-    @flavour.setter
+    @flavor.setter
     def flavor(self, value):
         self._flavor = value
 
