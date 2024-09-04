@@ -6,11 +6,11 @@ class JellyBean(Dessert):
         self._flavor = flavor
 
     @property
-    def flavour(self):
+    def flavor(self):
         return self._flavor
 
     @flavour.setter
-    def flavour(self, value):
+    def flavor(self, value):
         self._flavor = value
 
     def is_delicious(self):
@@ -22,5 +22,5 @@ class JellyBean(Dessert):
 # jb = JellyBean("Test test", 333, "black licorice")
 # print(jb.calories)
 # print(jb.name)
-# print(jb.flavour)
+# print(jb.flavor)
 # print(jb.is_delicious())
