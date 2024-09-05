@@ -19,7 +19,8 @@ class JellyBean(Dessert):
         return self._flavor.lower() != "black licorice"
 
 
-# jb = JellyBean("Test test", 333, "black licorice")
+jb = JellyBean("Test test", 333, "black licorice")
+jb.flavor = ""
 # print(jb.calories)
 # print(jb.name)
 # print(jb.flavor)
