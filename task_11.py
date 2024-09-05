@@ -1,10 +1,7 @@
 class Dessert:
     def __init__(self, name=None, calories=None):
-        self._name = name if name is not None else "Unnamed Dessert"
-        if calories is None: 
-            self._calories = 0
-        else:
-            self.calories = calories
+        self._name = name if name is not None and isinstance(name, str) else "Unnamed Dessert"
+        self.calories = calories
 
     @property
     def name(self):
@@ -12,9 +9,9 @@ class Dessert:
 
     @name.setter
     def name(self, value):
-        if value is None:
-            raise ValueError("Name must not be None!")
-        self._name = value
+        if value is None or not isinstance(value, str) or not value.strip():
+            raise ValueError("Name must be a non-empty string!")
+        self._name = value.strip()
 
     @property
     def calories(self):
