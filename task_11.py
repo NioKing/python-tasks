@@ -1,7 +1,7 @@
 class Dessert:
     def __init__(self, name=None, calories=None):
-        self._name = name if name is not None and isinstance(name, str) else "Unnamed Dessert"
-        self.calories = calories
+        self._name = name
+        self._calories = calories
 
     @property
     def name(self):
@@ -19,15 +19,17 @@ class Dessert:
 
     @calories.setter
     def calories(self, value):
+        self._calories = value
         try:
-            self._calories = int(value)
-            if self._calories < 0:
+            int_value = int(value)
+            if int_value < 0:
                 raise ValueError("Calories cannot be negative!")
+            self._calories = int_value
         except (ValueError, TypeError):
             self._calories = 0
 
     def is_healthy(self):
-        return self._calories < 200
+        return self._calories < 200 if isinstance(self._calories, int) else False
 
     def is_delicious(self):
         return True
@@ -52,9 +54,8 @@ d3 = Dessert("sdfsdf", "-100")
 d4 = Dessert()
 print(d4.calories)
 print(d4.name)
-d4.calories = 1212
+# d4.calories = 1212
 print(d4.calories)
 # d4.name = None
 # print(d4.name)
 # print(d2.calories)
-
