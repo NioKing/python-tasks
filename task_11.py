@@ -4,7 +4,7 @@ class Dessert:
         if calories is None: 
             self._calories = 0
         else:
-            self._calories = calories
+            self.calories = calories
 
     @property
     def name(self):
