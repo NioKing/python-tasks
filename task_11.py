@@ -19,14 +19,13 @@ class Dessert:
 
     @calories.setter
     def calories(self, value):
-        self._calories = value
         try:
             int_value = int(value)
             if int_value < 0:
                 raise ValueError("Calories cannot be negative!")
             self._calories = int_value
         except (ValueError, TypeError):
-            self._calories = 0
+            self._calories = value
 
     def is_healthy(self):
         return isinstance(self._calories, int) and self._calories < 200
